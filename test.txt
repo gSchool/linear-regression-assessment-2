@@ -1,0 +1,26 @@
+## !challenge
+
+* type: testable-project
+* id: 9deb1460-537d-416b-9af7-ed7f17855581
+* upstream: <link_to_project_repo>
+* title: Assesment 2
+
+### !question
+
+Fork and clone [this repo](<link to repo here>). Once you are done with your work, save the file as 'solutions.py'. Do this by downloading it as a .py file. Then push this repo to your github and paste a copy the repo url and paste it in the submission box below.
+
+### !end-question
+
+### !placeholder
+
+https://github.com/<user_name>/<repo_name>
+
+### !end-placeholder
+
+## !end-challenge
+
+## !instructor
+
+<link_to_solution_repo> OR if the solution is relatively straightforward, simply paste the code here.
+
+## !end-instructor
