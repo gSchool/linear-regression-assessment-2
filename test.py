@@ -1,3 +1,4 @@
+
 """Unit Tests for Student Submission"""
 import unittest
 import pandas as pd
@@ -37,16 +38,16 @@ class Test(unittest.TestCase):
         self.assertTrue('LSTAT' in list(solutions.X_mult.columns))
 
     def test_part5(self):
-        self.assertEqual(solutions.b_0_mult, -1.358272811874489)
-        self.assertEqual(solutions.coefs_mult[0], 5.094787984336544)
-        self.assertEqual(solutions.coefs_mult[1], -0.6423583342441294)
+        self.assertEqual(round(solutions.b_0_mult, 5), round(-1.358272811874489, 5))
+        self.assertEqual(round(solutions.coefs_mult[0], 5), round(5.094787984336544, 5))
+        self.assertEqual(round(solutions.coefs_mult[1], 5), round(-0.6423583342441294, 5))
         self.assertTrue(isinstance(solutions.b_0_mult, np.float64))
         self.assertTrue(isinstance(solutions.coefs_mult[0], np.float64))
         self.assertTrue(isinstance(solutions.coefs_mult[1], np.float64))
         
     def test_part6(self):
-        self.assertEqual(solutions.b_0_single, 62.344627474832635)
-        self.assertEqual(solutions.coefs_single[0], -2.157175296060964)
+        self.assertEqual(round(solutions.b_0_single, 5), round(62.344627474832635, 5))
+        self.assertEqual(round(solutions.coefs_single[0], 5), round(-2.157175296060964, 5))
         self.assertTrue(isinstance(solutions.b_0_single, np.float64))
         self.assertTrue(isinstance(solutions.coefs_single[0], np.float64))
         
@@ -55,13 +56,13 @@ class Test(unittest.TestCase):
         self.assertTrue(isinstance(solutions.y_hat_mult, np.ndarray))
         self.assertEqual(len(solutions.y_hat_single), 506)
         self.assertTrue(isinstance(solutions.y_hat_single, np.ndarray))
-        self.assertEqual(solutions.r2_mult, 0.6385616062603403)
-        self.assertEqual(solutions.r2_single, 0.2578473180092231)
-        self.assertEqual(solutions.mse_mult, 30.51246877729947)
-        self.assertEqual(solutions.mse_single, 62.65220001376926)
-        self.assertEqual(solutions.ssr_mult, 15439.309201313532)
-        self.assertEqual(solutions.ssr_single, 31702.013206967247)
-        self.assertEqual(solutions.best_scores, (0.6385616062603403, 30.51246877729947, 15439.309201313532))
+        self.assertEqual(round(solutions.r2_mult, 5), round(0.6385616062603403, 5))
+        self.assertEqual(round(solutions.r2_single, 5), round(0.2578473180092231, 5))
+        self.assertEqual(round(solutions.mse_mult, 5), round(30.51246877729947, 5))
+        self.assertEqual(round(solutions.mse_single, 5), round(62.65220001376926, 5))
+        self.assertEqual(round(solutions.ssr_mult, 5), round(15439.309201313532, 5))
+        self.assertEqual(round(solutions.ssr_single, 5), round(31702.013206967247, 5))
+        self.assertEqual(tuple([round(score, 5) for score in solutions.best_scores]), (round(0.6385616062603403, 5), round(30.51246877729947, 5), round(15439.309201313532, 5)))
         self.assertTrue(isinstance(solutions.best_scores, tuple))
         
     def test_part8(self):
